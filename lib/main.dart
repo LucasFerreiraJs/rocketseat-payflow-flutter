@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:payflow/app_widget.dart';
+import 'package:payflow/app-widget.dart';
 import 'package:payflow/modules/home/home-page.dart';
 import 'package:payflow/modules/login/login-page.dart';
 import 'package:payflow/modules/splash/splash-page.dart';

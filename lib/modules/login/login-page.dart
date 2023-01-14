@@ -65,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                       iconeUrl: AppImages.google,
                       title: "Entrar com o Google",
                       onTap: () {
-                        controller.googleSignIn();
+                        controller.googleSignIn(context);
                       },
                     ),
                   )

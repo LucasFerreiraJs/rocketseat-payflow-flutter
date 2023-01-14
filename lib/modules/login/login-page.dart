@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:payflow/modules/login/login_controller.dart';
 import 'package:payflow/shared/themes/app-colors.dart';
 import 'package:payflow/shared/themes/app-images.dart';
 import 'package:payflow/shared/themes/app-text-style.dart';
@@ -12,6 +14,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final controller = new LoginController();
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -61,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                       iconeUrl: AppImages.google,
                       title: "Entrar com o Google",
                       onTap: () {
-                        print("tap");
+                        controller.googleSignIn();
                       },
                     ),
                   )

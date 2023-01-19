@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:payflow/modules/barcode-scanner/barcode-scanner-page.dart';
 import 'package:payflow/modules/home/home-page.dart';
 import 'package:payflow/modules/login/login-page.dart';
@@ -6,8 +7,14 @@ import 'package:payflow/modules/splash/splash-page.dart';
 import 'package:payflow/shared/themes/app-colors.dart';
 
 class AppWidget extends StatelessWidget {
-  const AppWidget({Key? key}) : super(key: key);
+  // const AppWidget({Key? key}) : super(key: key);
 
+  AppWidget() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+    ]);
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

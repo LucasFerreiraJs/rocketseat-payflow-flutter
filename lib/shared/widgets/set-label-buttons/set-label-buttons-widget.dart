@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:payflow/shared/themes/app-colors.dart';
 import 'package:payflow/shared/themes/app-text-style.dart';
 import 'package:payflow/shared/widgets/divider/divider-widget.dart';
 
@@ -23,6 +24,7 @@ class SetLabelButtonsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: AppColors.shape,
       height: 56,
       child: Row(
         children: [

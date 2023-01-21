@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-import 'package:payflow/shared/themes/app-text-style.dart';
+import 'package:payflow/shared/themes/app-textstyle.dart';
 
 class LabelButtonWidget extends StatelessWidget {
   final String label;

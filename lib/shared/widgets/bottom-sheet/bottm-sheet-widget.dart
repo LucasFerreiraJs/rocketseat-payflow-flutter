@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payflow/shared/themes/app-colors.dart';
-import 'package:payflow/shared/themes/app-text-style.dart';
+import 'package:payflow/shared/themes/app-textstyle.dart';
 import 'package:payflow/shared/widgets/set-label-buttons/set-label-buttons-widget.dart';
 
 class BottomSheetWidget extends StatelessWidget {

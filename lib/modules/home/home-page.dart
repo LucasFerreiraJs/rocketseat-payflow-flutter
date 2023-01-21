@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:payflow/modules/home/home-controller.dart';
 import 'package:payflow/shared/themes/app-colors.dart';
-import 'package:payflow/shared/themes/app-text-style.dart';
+import 'package:payflow/shared/themes/app-textstyle.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -71,7 +71,8 @@ class _HomePageState extends State<HomePage> {
             GestureDetector(
               onTap: () {
                 print("gesture tap");
-                Navigator.pushNamed(context, "/barcode-scanner");
+                // Navigator.pushNamed(context, "/barcode-scanner");
+                Navigator.pushNamed(context, "/insert-boleto");
               },
               child: Container(
                 width: 56,

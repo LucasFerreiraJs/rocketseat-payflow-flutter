@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:payflow/shared/themes/app-colors.dart';
 import 'package:payflow/shared/themes/app-images.dart';
-import 'package:payflow/shared/themes/app-text-style.dart';
+import 'package:payflow/shared/themes/app-textstyle.dart';
 
 class SocialLoginBtnWidget extends StatelessWidget {
   final String iconeUrl;

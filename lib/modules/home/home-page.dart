@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:payflow/modules/extract/extract-page.dart';
 import 'package:payflow/modules/home/home-controller.dart';
+import 'package:payflow/modules/meus-boletos/meus-boletos-page.dart';
 import 'package:payflow/shared/models/boleto-model.dart';
 import 'package:payflow/shared/themes/app-colors.dart';
 import 'package:payflow/shared/themes/app-textstyle.dart';
+import 'package:payflow/shared/widgets/boleto-list/boleto-list-widget.dart';
 import 'package:payflow/shared/widgets/boleto-tile/boleto-tille-widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,16 +18,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final homePageController = new HomePageController();
   final pagesContainer = [
-    Container(
-        child: BoletoTileWidget(
-      boletoModel: BoletoModel(
-        name: "teste",
-        dueDate: "22/11/2023",
-        barcode: "111111111111111111",
-        value: 100.0,
-      ),
-    )),
-    Container(color: Colors.blue),
+    // Container(child: BoletoListWidget()),
+    MeusBoletosPage(),
+    ExtractPage(),
   ];
 
   @override

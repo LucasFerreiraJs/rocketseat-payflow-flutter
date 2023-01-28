@@ -94,9 +94,13 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
                     InputTextWidget(
                       controller: moneyInputTextController,
                       label: "Valor",
-                      validator: (_) => controller.validateValor(moneyInputTextController.numberValue),
+                      validator: (_) {
+                        print("validator ${moneyInputTextController.numberValue}");
+                        controller.validateValor(moneyInputTextController.numberValue);
+                      },
                       icon: FontAwesomeIcons.wallet,
                       onChanged: (value) {
+                        print("on change value $value e ${moneyInputTextController.numberValue}");
                         controller.onChange(value: moneyInputTextController.numberValue);
                       },
                     ),
@@ -123,8 +127,9 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
         },
         secondaryLabel: "Cadastrar",
         enableSecondaryColor: true,
-        secondaryOnPressed: () {
-          controller.cadastrarBoleto();
+        secondaryOnPressed: () async {
+          await controller.cadastrarBoleto();
+          Navigator.pop(context);
         },
       ),
     );

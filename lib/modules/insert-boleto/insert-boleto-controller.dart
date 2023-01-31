@@ -6,6 +6,10 @@ class InsertBoletoController {
   final formKey = GlobalKey<FormState>();
   BoletoModel boletoModel = new BoletoModel();
 
+  String returnBarcode() {
+    return boletoModel.barcode.toString();
+  }
+
   String? validateName(String? value) {
     return value?.isEmpty ?? true ? "O nome não pode ser vazio" : null;
   }
@@ -27,7 +31,7 @@ class InsertBoletoController {
     String? name,
     String? dueDate,
     double? value,
-    String? barCode,
+    String? barcode,
   }) {
     // *  se o param que vc passou for nulo, ele mantém o que estava salvo
 
@@ -35,7 +39,7 @@ class InsertBoletoController {
       name: name,
       dueDate: dueDate,
       value: value,
-      barcode: barCode,
+      barcode: barcode,
     );
   }
 
@@ -58,7 +62,7 @@ class InsertBoletoController {
     final form = formKey.currentState;
 
     if (form!.validate()) {
-      return saveBoleto();
+      return await saveBoleto();
     }
   }
 }

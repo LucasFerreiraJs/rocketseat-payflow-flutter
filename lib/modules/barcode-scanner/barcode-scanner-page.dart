@@ -15,14 +15,18 @@ class BarcodeScannerPage extends StatefulWidget {
 }
 
 class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
-  final controller = new BarcodeScannerController();
+  final controller = BarcodeScannerController();
 
   @override
   void initState() {
     controller.getAvailableCameras();
     controller.statusNotifier.addListener(() {
       if (controller.status.hasBarcode) {
-        Navigator.pushReplacementNamed(context, "/insert-boleto");
+        Navigator.pushReplacementNamed(
+          context,
+          "/insert-boleto",
+          arguments: controller.status.barcode,
+        );
       }
     });
     super.initState();
@@ -31,7 +35,7 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
   @override
   void dispose() {
     controller.dispose();
-    super.dispose;
+    super.dispose();
   }
 
   @override
